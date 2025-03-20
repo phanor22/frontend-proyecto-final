@@ -1,0 +1,97 @@
+
+
+
+.row {
+    margin-right: -15px;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+
+
+/* Centrar el formulario en la página usando Flexbox */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Hace que el contenedor tenga una altura mínima de la pantalla */
+}
+
+/* Estilos generales para el formulario */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #5cb85c; /* Borde más grueso y marcado */
+    max-width: 500px; /* Asegura que el formulario no se estire demasiado */
+    width: 100%; /* Hace que el formulario ocupe el ancho completo hasta el límite */
+    text-align: center;
+}
+
+/* Formato del título */
+.form-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+/* Estilo para los labels */
+.form-container .form-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #555555;
+}
+
+/* Estilo de los campos de formulario */
+.form-container .form-control {
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+    width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
+}
+
+/* Estilo cuando el campo está enfocado */
+.form-container .form-control:focus {
+    border-color: #5cb85c; /* Borde verde cuando el campo está enfocado */
+    outline: none;
+}
+
+/* Estilo del botón */
+.form-container .btn-primary {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+}
+
+/* Estilo del botón al hacer hover */
+.form-container .btn-primary:hover {
+    background-color: #4cae4c;
+}
+
+/* Enlace para el registro */
+.form-container p {
+    font-size: 1rem;
+    color: #666666;
+}
+
+.form-container p a {
+    color: #5cb85c;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-container p a:hover {
+    text-decoration: underline;
+}

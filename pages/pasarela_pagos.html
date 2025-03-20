@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <link rel="icon" href="../images/logo.png" type="image/png">
+     <title>FIND ME</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="../css/particular.css">
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+     <link rel="stylesheet" href="../css/font-awesome.min.css">
+     <link rel="stylesheet" href="../css/animate.css">
+     <link rel="stylesheet" href="../css/owl.carousel.css">
+     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="../css/tooplate-style.css">
+
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+                    <a href="../index.html" class="navbar-brand">
+                         <i class="fa fa-h-squares"></i>FIND ME
+                         <img src="../images/logo.png" alt="Logo" class="logo-img">
+                    </a>
+               </div>
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="panel.html" class="#">panel de usuario</a></li>
+                         <li><a href="evidencias.html">verificar evidencias</a></li>
+                         <li class="nav-item"><a href="notificacion_equipo.html" class="nav-link text-white">Notificación de Equipo</a></li>
+                         <li class="nav-item"><a href="../index.html" class="nav-link text-white">Cerrar Sesión</a></li>
+                       
+                    </ul>
+               </div>
+          </div>
+     </section>
+
+     <div class="container mt-5">
+          <h2 class="text-center mb-4">Formulario de Pago</h2>
+          
+          <form id="formPago" class="mx-auto" style="max-width: 400px;">
+               <div class="mb-3">
+                    <label class="form-label">E-mail</label>
+                    <input type="email" class="form-control" placeholder="ejemplo@email.com" required>
+               </div>
+               
+               <div class="mb-3">
+                    <label class="form-label">Nombre en la Tarjeta</label>
+                    <input type="text" class="form-control" required>
+               </div>
+               <div class="mb-3">
+                    <label class="form-label">Número de Tarjeta</label>
+                    <input type="text" class="form-control" pattern="\d{16}" placeholder="1234 5678 9012 3456" required>
+               </div>
+               <div class="mb-3">
+                    <label class="form-label">Fecha de Vencimiento</label>
+                    <input type="text" class="form-control" id="fechaVencimiento" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])\/\d{2}" required>
+               </div>
+               
+               <div class="mb-3">
+                    <label class="form-label">CVV</label>
+                    <input type="text" class="form-control" pattern="\d{3}" placeholder="123" required>
+               </div>
+               <button type="button" id="btnPagar" class="btn btn-primary w-100">Pagar</button>
+               <p id="mensajePago" class="text-center mt-3" style="display: none; color: green;">Procesando pago...</p>
+          </form>
+     </div>
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Informacion de contacto</h4>
+                              <p>Llamenos o escribanos en cualquier momento que atendemos 24/7.</p>
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">findme@gmail.com</a></p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="../js/jquery.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
+     <script>
+          document.getElementById("btnPagar").addEventListener("click", function () {
+               let mensaje = document.getElementById("mensajePago");
+               mensaje.style.display = "block";
+               setTimeout(() => {
+                    mensaje.innerText = "Pago exitoso";
+               }, 2000);
+          });
+
+          document.getElementById("fechaVencimiento").addEventListener("input", function (e) {
+     let value = e.target.value.replace(/\D/g, ""); // Elimina caracteres no numéricos
+     if (value.length >= 2) {
+          value = value.substring(0, 2) + "/" + value.substring(2, 4);
+     }
+     e.target.value = value.substring(0, 5); // Limita a 5 caracteres
+});
+
+     </script>
+
+
+
+
+     <!-- SCRIPTS -->
+     <script src="../js/jquery.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/jquery.sticky.js"></script>
+     <script src="../js/jquery.stellar.min.js"></script>
+     <script src="../js/wow.min.js"></script>
+     <script src="../js/smoothscroll.js"></script>
+     <script src="../js/owl.carousel.min.js"></script>
+     <script src="../js/custom.js"></script>
+
+</body>
+
+</html>

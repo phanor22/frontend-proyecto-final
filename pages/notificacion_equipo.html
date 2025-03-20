@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <link rel="icon" href="../images/logo.png" type="image/png">
+     <title>FIND ME</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="../css/particular.css">
+     <link rel="stylesheet" href="../css/bootstrap.min.css">
+     <link rel="stylesheet" href="../css/font-awesome.min.css">
+     <link rel="stylesheet" href="../css/animate.css">
+     <link rel="stylesheet" href="../css/owl.carousel.css">
+     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+
+     <link rel="stylesheet" href="../css/notificacion.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="../css/tooplate-style.css">
+
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+
+
+                    <a href="../index.html" class="navbar-brand">
+                         <i class="fa fa-h-squares"></i>FIND ME
+                         <img src="../images/logo.png" alt="Logo" class="logo-img"> <!-- Logo a la derecha -->
+                    </a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="evidencias.html">verificar evidencias</a></li>
+                         <li class="nav-item"><a href="pasarela_pagos.html" class="nav-link text-white">Realizar Pago</a></li>
+                       
+                         <!-- <li><a href="#about" class="smoothScroll">Acerca de nosotros</a></li>
+                         <li><a href="#team" class="smoothScroll">Planes</a></li>
+                         <li><a href="#news" class="smoothScroll">Mascotas Recuperadas</a></li> -->
+                         <li><a href="panel.html" class="#">panel de usuario</a></li>
+                         <li><a href="../index.html" class="#">Cerrar sesion</a></li>
+
+                         <li class="appointment-btn"><a href="#appointment">Contratar Servicio</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+
+
+
+     
+
+
+
+     <div class="container mt-4">
+        <h2 class="text-center mb-4">Formulario de Envío de Notificación</h2>
+        <form id="formNotificacion" class="mx-auto" style="max-width: 600px;">
+            <div class="mb-3">
+                <label class="form-label">Información sobre la pérdida:</label>
+                <textarea id="descripcion" class="form-control" placeholder="Relate los hechos..." required></textarea>
+            </div>
+
+            <fieldset class="border p-3 mb-3">
+                <legend class="w-auto">Datos del Perro</legend>
+                <div class="mb-2">
+                    <label class="form-label">Tamaño:</label>
+                    <div>
+                        <input type="radio" name="tamano" value="pequeño" required> Pequeño
+                        <input type="radio" name="tamano" value="mediano"> Mediano
+                        <input type="radio" name="tamano" value="grande"> Grande
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Peso (kg):</label>
+                    <input type="number" id="peso" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">¿Es agresivo?</label>
+                    <div>
+                        <input type="radio" name="agresivo" value="si" required> Sí
+                        <input type="radio" name="agresivo" value="no"> No
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nombre por el que responde:</label>
+                    <input type="text" id="nombre" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Edad (años):</label>
+                    <input type="number" id="edad" class="form-control" required>
+                </div>
+            </fieldset>
+
+            <div class="mb-3">
+                <label class="form-label">Información médica:</label>
+                <textarea id="medica" class="form-control" placeholder="Enfermedades, estado de salud..." required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Fotos de la mascota (opcional):</label>
+                <input type="file" id="fotos" class="form-control" accept="image/*" multiple>
+            </div>
+
+            <button type="button" id="btnEnviar" class="btn btn-primary w-100">Enviar Notificación</button>
+        </form>
+    </div>
+
+    <div id="alertaEnvio" class="position-fixed top-50 start-50 translate-middle bg-success text-white p-4 rounded shadow-lg text-center" style="display: none; max-width: 400px;">
+        <p>Se ha enviado la notificación al equipo de búsqueda. Próximamente, en la sección "Verificar Evidencias", podrá encontrar actualizaciones sobre la búsqueda de su mascota.</p>
+        <button class="btn btn-light" onclick="cerrarAlerta()">Cerrar</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Informacion de contacto</h4>
+                              <p>Llamenos o escribanos en cualquier momento que atendemos 24/7.</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">findme@gmail.com</a></p>
+                              </div>
+                         </div>
+                    </div>
+
+
+
+
+
+
+
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="../js/jquery.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/jquery.sticky.js"></script>
+     <script src="../js/jquery.stellar.min.js"></script>
+     <script src="../js/wow.min.js"></script>
+     <script src="../js/smoothscroll.js"></script>
+     <script src="../js/owl.carousel.min.js"></script>
+     <script src="../js/custom.js"></script>
+
+</body>
+
+</html>

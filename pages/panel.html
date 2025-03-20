@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+    <title>FIND ME</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Tooplate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/particular.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/panel.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../css/tooplate-style.css">
+
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+
+
+
+                <a href="../index.html" class="navbar-brand">
+                    <i class="fa fa-h-squares"></i>FIND ME
+                    <img src="../images/logo.png" alt="Logo" class="logo-img"> <!-- Logo a la derecha -->
+                </a>
+            </div>
+            <!-- <h1>PANEL CLIENTE LOGUEADO</h1> -->
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a href="#top" class="smoothScroll">Inicio</a></li>
+                    <li><a href="#about" class="smoothScroll">Acerca de nosotros</a></li>
+                    <li><a href="#team" class="smoothScroll">Planes</a></li>
+                    <li><a href="#news" class="smoothScroll">Mascotas Recuperadas</a></li>
+                    <li><a href="login.html" class="#">Login</a></li> -->
+                    <li class="nav-item"><a href="../index.html" class="nav-link text-white">Inicio</a></li>
+                    <li class="nav-item"><a href="evidencias.html" class="nav-link text-white">Verificar Evidencias</a></li>
+                    <li class="nav-item"><a href="pasarela_pagos.html" class="nav-link text-white">Realizar Pago</a></li>
+                    <li class="nav-item"><a href="notificacion_equipo.html" class="nav-link text-white">Notificación de Equipo</a></li>
+                    <li class="nav-item"><a href="../index.html" class="nav-link text-white">Cerrar Sesión</a></li>
+
+                    <li class="appointment-btn"><a href="#appointment">Contratar Servicio</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <main class="container mt-5">
+        <h2 class="text-center mb-4">Bienvenido a tu Panel de Usuario</h2>
+        <section class="perfil card p-4 text-center">
+            <h3>Tu Información</h3>
+            <div class="d-flex justify-content-center align-items-center flex-column">
+
+                <div class="imagenes-contenedor">
+                    <!-- Foto de la mascota -->
+                    <div class="imagen-container">
+                        <img id="fotoMascota" src="../images/mascota.jpg" alt="Foto de la mascota">
+                        <input type="file" id="subirMascota" accept="image/*">
+                    </div>
+                
+                    <!-- Foto del usuario -->
+                    <div class="imagen-container">
+                        <img id="fotoUsuario" src="../images/sofia1.jpg" alt="Foto del usuario">
+                        <input type="file" id="subirUsuario" accept="image/*">
+                    </div>
+                </div>
+                
+
+                <div class="datos">
+                    <p><strong>Nombre:</strong> sofia</p>
+                    <p><strong>Email:</strong> sofii@email.com</p>
+                    <p><strong>Estado de búsqueda:</strong> En progreso</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer data-stellar-background-ratio="5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="footer-thumb">
+                        <h4 class="wow fadeInUp" data-wow-delay="0.4s">Informacion de contacto</h4>
+                        <p>Llamenos o escribanos en cualquier momento que atendemos 24/7.</p>
+
+                        <div class="contact-info">
+                            <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                            <p><i class="fa fa-envelope-o"></i> <a href="#">findme@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/jquery.stellar.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/smoothscroll.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/custom.js"></script>
+
+    <script>
+        document.getElementById('subirMascota').addEventListener('change', function(event) {
+            let imagenMascota = document.getElementById('fotoMascota');
+            let archivo = event.target.files[0];
+            
+            if (archivo) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    imagenMascota.src = e.target.result;
+                };
+                reader.readAsDataURL(archivo);
+            }
+        });
+
+        document.getElementById('subirUsuario').addEventListener('change', function(event) {
+            let imagenUsuario = document.getElementById('fotoUsuario');
+            let archivo = event.target.files[0];
+            
+            if (archivo) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    imagenUsuario.src = e.target.result;
+                };
+                reader.readAsDataURL(archivo);
+            }
+        });
+    </script>
+
+<!-- <script>
+    // Cargar los datos del usuario desde localStorage
+    window.onload = function() {
+        const usuario = JSON.parse(localStorage.getItem('usuario'));
+
+        if (usuario) {
+            // Si los datos existen, mostrar en los campos
+            document.querySelector('.datos p:nth-child(1)').innerHTML = `<strong>Nombre:</strong> ${usuario.nombre}`;
+            document.querySelector('.datos p:nth-child(2)').innerHTML = `<strong>Email:</strong> ${usuario.email}`;
+            // Si deseas agregar más datos, puedes hacerlo aquí también.
+        } else {
+            // Si no hay datos del usuario en localStorage, redirigir a login o página de error
+            alert("No se encontró información del usuario. Redirigiendo...");
+            window.location.href = "../index.html"; // Redirigir al login si no hay datos
+        }
+    }
+</script> -->
+
+
+</body>
+
+</html>
