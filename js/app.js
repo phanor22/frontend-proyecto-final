@@ -1,5 +1,5 @@
 // Define la URL del backend (servidor donde está corriendo la API)
-const backendURL = "http://localhost:5000";  // Cambia la URL si tu backend tiene otra dirección
+const backendURL = "https://backend-project-final-u20l.onrender.com";  // Cambia la URL si tu backend tiene otra dirección
 
 // Obtener los items
 async function fetchItems() {
