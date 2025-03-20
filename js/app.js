@@ -22,7 +22,7 @@ document.getElementById('appointment-form').addEventListener('submit', async (ev
     const clienteData = { nombre, email, direccion, celular, message };
 
     try {
-        const response = await fetch("https://backend-project-final-u20l.onrender.com", {
+        const response = await fetch("https://backend-project-final-u20l.onrender.com/clientes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
